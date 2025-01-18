@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores de JavaScript</title>
+</head>
+<body>
+    <script>
+        // ENTRADA, PROCESSAMENTO E SAÍDA
+        var nome = "Marcio Ferreira";
+        // alert(nome + " - IW Training");
+
+        var numero1 = 10;
+        var numero2 = 14;
+        numero1 = 13;
+        
+        var adicao = numero1 + numero2;
+        var subtracao = numero1 - numero2;
+        var divisao = numero1 / numero2;
+        var multiplicacao = numero1 * numero2;
+        var resto_divisao = numero1 % numero2;
+        console.log(resto_divisao);
+        // alert("Resultado: " + adicao);
+
+        var usuario = prompt("Informe seu nome");
+        
+        var n1 = prompt("Digite o N1") // string
+        var n2 = prompt("Digite o N2") // string
+
+        n1 = parseInt(n1)
+        n2 = parseInt(n2)
+
+        var soma = n1 + n2
+        document.write(soma)
+
+        // OPERADORES DE COMPARACAO
+        var logico1 = n1 > n2;
+        var logico2 = n1 < n2;
+        var logico3 = n1 >= n2;
+        var logico4 = n1 <= n2;
+        var logico5 = n1 == n2;
+        var logico6 = n1 === n2; 
+        var logico7 = n1 != n2;
+
+        var l1 = 10 === '10'; //false - COMPARA TIPO E VALOR
+        var l2 = 10 == '10'; //true - COMPARA SOMENTE VALOR
+    </script>
+</body>
+</html>

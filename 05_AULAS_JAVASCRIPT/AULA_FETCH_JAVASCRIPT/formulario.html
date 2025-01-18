@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form-endereco">
+        <div>
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" required>
+            <button type="button" onclick="buscarCep()">Buscar</button>
+        </div>
+        <div>
+            <label for="logradouro">Logradouro:</label>
+            <input type="text" id="logradouro" readonly>
+        </div>
+        <button>Salvar</button>
+    </form>
+    <script>
+        function buscarCep() {
+            const cep = document.getElementById('cep').value;
+            const url = `https://viacep.com.br/ws/${cep}/json`;
+            fetch(url)
+            .then((dados) => {
+                return dados.json()
+            })
+            .then((json) => {
+                if(json.erro) {
+                    alert("CEP inexistente");
+                } else {
+                    document.querySelector('#logradouro').value = json.logradouro
+                    // https://dontpad.com/fs009
+                    // DEVEM CRIAR OS CAMPOS
+                    // NUMERO,COMPLEMENTO, BAIRRO, CIDADE, ESTADO
+                    // E DEVEM PREECHER COM OS DADOS DO JSON.
+                }                
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+        }
+        
+        const form = document.querySelector('#form-endereco');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const cep = document.querySelector('#cep').value;
+            const logradouro = document.querySelector('.logradouro').value
+
+            const endereco = {
+                cep,
+                logradouro
+            }
+
+            
+        });
+    </script>
+</body>
+</html>

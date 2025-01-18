@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções de JS</title>
+</head>
+<body>
+    <script>
+        // Funções Simples
+        function nomeFuncao() {
+            // Codigo a ser executado
+            alert("Ola Funcao")
+        }
+        // nomeFuncao()
+
+        // Funções com Parâmetros
+        function nomeFuncaoComParametro(n1, n2, n3) {
+            var resultado = n1 + n2 + n3
+            alert("Resultado: " + resultado)
+        }
+        nomeFuncaoComParametro(6.5, 7, 5)
+
+        // Funcoes de Retorno
+        function nomeFuncaoComRetorno(n1, n2) {
+            var resultado = n1 * n2
+            return resultado
+        }
+
+        var resultado1 = nomeFuncaoComRetorno(1, 2)
+        var resultado2 = nomeFuncaoComRetorno(3, 10)
+        var total = resultado1 + resultado2
+        alert("Total: " + total)
+
+        // Arrow Function - Funcoes de Seta e Variaveis
+        var funcaoSeta = (n1, n2) => n1 + n2
+        var funcaoSeta2 = n1 => n1 ** n1
+        
+        var res = funcaoSeta(1, 2)
+        alert(res)
+
+        // Funcoes de CallBack = Chamada de Retorno
+        function funcaoA(callBack) {
+            console.log("Funcao AA")
+            callBack("Max Ferreira"); // Callback é a funcao B sendo chamada.
+        }
+
+        function funcaoB(nome) {
+            console.log("Funcao BB " + nome)
+        }
+
+        funcaoA(funcaoB)
+
+
+        // TIPOS DE VARIAVEIS:  VAR, LET E CONST
+        var soma = 10; // PODE REDECLARAR E PODE MUDAR VALORES.
+        let qualquerValor = 2; // NAO PODE REDECLARAR E PODE MUDAR VALORES
+        qualquerValor = 3;
+
+        const PI = 3.14; // NAO PODE REDECLARAR E NAO PODE MUDAR VALORES.
+        console.log(soma)
+
+        let wagner = 'Coordenador'
+        function salaRobotica() {
+            let professorR = 'Eduardo'
+            
+        }
+        function salaProgramacao() {
+            let professorP = 'Marcio'
+        }
+
+        
+
+
+        
+    </script>
+</body>
+</html>

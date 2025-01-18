@@ -1,0 +1,9 @@
+{
+    "nome": "John Doe",
+    "idade": 30,
+    "endereco": {
+        "rua": "Rua dos Bobos",
+        "numero": 123,
+        "cidade": "Cidade do Bobos"
+    }
+  }

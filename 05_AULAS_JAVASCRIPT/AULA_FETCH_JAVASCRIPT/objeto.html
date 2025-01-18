@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const objeto = {
+            nome: 'John Doe',
+            idade: 30,
+            endereco: {
+                rua: 'Rua dos Bobos',
+                numero: 123,
+                cidade: 'Cidade do Bobos'
+            }
+        }
+        document.write(objeto.nome)
+        document.write(objeto.idade)
+        document.write(objeto.endereco.rua)
+        
+        // CONVERTER OBJECT PARA JSON
+        const textoJson = JSON.stringify(objeto)
+        
+        // CONVERTER JSON PARA OBJECT
+        const objectoJson = JSON.parse(textoJson)
+
+    </script>
+</body>
+</html>

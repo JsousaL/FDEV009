@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label for="">Valor1</label>
+    <input type="text" id="valor1">
+    <br>
+    <label for="">Valor2</label>
+    <input type="text" id="valor2">
+    <br>
+    <button onclick="adicao()">Adição</button>
+    <div id="resultado"></div>
+    <script>
+        function adicao() {
+            const campo1 = document.querySelector("#valor1")
+            const campo2 = document.querySelector("#valor2")
+
+            const resultado = parseFloat(campo1.value) + parseFloat(campo2.value)
+            document.querySelector("#resultado").innerHTML = `Resultado: ${resultado}`
+            const lista = document.querySelectorAll("#resultado")
+            
+            // document.querySelectorAll('input')
+            // document.getElementById()
+            // document.getElementsByClassName
+            
+            
+        }
+    </script>
+</body>
+</html>

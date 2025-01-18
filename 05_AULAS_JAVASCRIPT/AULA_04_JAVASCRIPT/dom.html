@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=pt, initial-scale=1.0">
+    <title>DOM - Document Object Model</title>
+</head>
+<body>
+    <button>Clique Aqui</button>
+    <div id="conteudo"></div>
+
+    <script>
+        const btn = document.querySelector('button')
+        btn.style.background = 'red'
+        btn.style.color = 'white'
+        btn.innerHTML = 'Eu Sou o JS!'
+
+        const a = document.createElement('a')
+        a.href = 'http://google.com.br'
+        a.target = '_blank'
+        a.innerHTML = 'Visite o Google!'
+
+        document.querySelector('body').appendChild(a)
+        // https://dontpad.com/fs009
+        const ul = document.createElement('ul') // CRIANDO UL
+
+        // CRIANDO LI s - ITENS DA LISTA
+        const li1 = document.createElement('li')
+        li1.innerHTML = 'Bolo'
+        const li2 = document.createElement('li')
+        li2.innerHTML = 'Café'
+
+        ul.appendChild(li1)
+        ul.appendChild(li2)
+        document.querySelector('#conteudo').appendChild(ul)
+    </script>
+</body>
+</html>

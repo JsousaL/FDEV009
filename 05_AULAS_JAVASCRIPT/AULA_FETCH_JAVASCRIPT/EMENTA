@@ -1,0 +1,25 @@
+MODULO:
+- JAVASCRIPT
+
+OBJETIVOS:
+- REST FUL API
+- PROTOCOLO HTTP
+- VERBOS/MÉTODOS HTTP: GET, POST, PUT E DELETE
+- WEB SERVICES - VIA CEP
+- OUTROS WEB SERVICES API
+
+CONTEUDO:
+- CRIANDO UM FORMULARIO DE ENDEREÇO E CONSULTANDO CEP
+
+::------------------------------------------------------------
+JSON - JavaScript Object Notation
+
+{
+  "nome": 'John Doe',
+  "idade": 30,
+  "endereco": {
+      "rua": 'Rua dos Bobos',
+      "numero": 123,
+      "cidade": 'Cidade do Bobos'
+  }
+}

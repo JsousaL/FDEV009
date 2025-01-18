@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos com HTML</title>
+</head>
+<body>
+    <script>
+        // DADOS PRIMITIVOS
+        // string, number, boolean, NaN, undefined, null
+
+        // DADOS DE OBJETOS - São um COnjunto de Dados Primitivos
+        const pessoa = {
+            nome: 'Emmille',
+            idade: 25,
+            altura: 1.60,
+            tem_filhos: true,
+            endereco: {
+                rua: 'Rua dos Bebês',
+                numero: 123,
+                cidade: 'Cidade do Futuro',
+                estado: 'UF do Futuro'
+            } 
+        }
+        console.log(pessoa.nome)
+        console.log(pessoa.idade)
+        pessoa.altura = 1.65
+        console.log(pessoa.endereco.rua)
+
+
+        // ARRAYS - DADOS COMPOSTOS
+        const alunos = ["Ana", "Joao", "Jose"]
+
+        console.log(alunos[0])
+        console.log(alunos[1])
+        console.log(alunos[2])
+
+        alunos[3] = "Emmille"
+        const valores = [
+            "Texto", 
+            10, 
+            true, 
+            undefined, 
+            null, 
+            { nome: 'Ana' },
+            []
+        ];
+
+
+        // MATRIZES
+        const matriz_simples = [1, 3, 7, 9, 2]
+        // Imprima o valor 7 do array acima
+        console.log(matriz_simples[2]);
+        console.log(matriz_simples[4]);
+
+        const matriz = [
+           [1, 2, 3],
+           [4, 5, 6],
+           [7, 8, 9]
+        ]
+
+        console.log(matriz[0][1])
+        console.log(matriz[1][1])
+        console.log(matriz[2][2])
+
+
+        // Arrays com Objetos
+        const pessoas = [
+            {
+                nome: 'Ana',
+                idade: 25
+            },
+            {
+                nome: 'Joao',
+                idade: 28
+            },
+            {
+                nome: 'Jose',
+                idade: 32
+            }
+        ]
+
+        pessoas[0].nome
+        pessoas[2].nome
+
+
+
+        const dados = [
+            { codigo: 1, descricao: "Enel", valor: 200, vencimento: "01/01/2024", status: "Pago" },
+            { codigo: 2, descricao: "Cagece", valor: 100, vencimento: "02/01/2024", status: "Pago" },
+            { codigo: 3, descricao: "mercado", valor: 600, vencimento: "03/01/2024", status: "Pendente" },
+        ];
+
+        console.log(dados[0].descricao)
+        console.log(dados[2].status)
+
+
+
+        
+        const empresa = {
+            nome: "Tech Solutions",
+            fundacao: 2010,
+            setores: [
+                {
+                    nome: "Desenvolvimento",
+                    lider: "Carlos Silva",
+                    equipe: [
+                        { nome: "Ana", cargo: "Desenvolvedora Front-end", experiencia: 3 },
+                        { nome: "Pedro", cargo: "Desenvolvedor Back-end", experiencia: 5 },
+                        { nome: "João", cargo: "DevOps", experiencia: 4 }
+                    ]
+                },
+                {
+                    nome: "Marketing",
+                    lider: "Mariana Oliveira",
+                    equipe: [
+                        { nome: "Paula", cargo: "Social Media", experiencia: 2 },
+                        { nome: "Roberto", cargo: "Analista de Marketing", experiencia: 6 }
+                    ]
+                }
+            ],
+            projetos: [
+                {
+                nome: "Plataforma X",
+                descricao: "Sistema para gestão de projetos",
+                status: "Em desenvolvimento",
+                equipeEnvolvida: ["Ana", "Pedro", "João"]
+                },
+                {
+                nome: "Site Y",
+                descricao: "Site institucional para um cliente",
+                status: "Concluído",
+                equipeEnvolvida: ["Ana", "Paula"]
+                }
+            ]
+        };
+
+        console.log(empresa.projetos[1].nome)
+        console.log(empresa.setores[0].equipe[2].cargo)
+
+
+
+
+        // METODOS DE ARRAYS DEL
+        const professores = ['Joao', 'Jose']
+    
+        console.log(professores)// Joao, Jose
+
+        professores.push('Maria') // Add no Final do Array
+        console.log(professores)// Joao, Jose, Maria
+        professores.pop() // Remove no Final do Array
+        console.log(professores)// Joao, Jose
+
+        professores.unshift('Joao') // Add na primeira Posicao
+        console.log(professores)// Joao, Joao, Jose
+        professores.shift() // Remove na primeira Posicao
+        console.log(professores)// Joao, Jose
+
+        professores.length // Ele exibe o tamanho do array
+        professores.push('Ana')
+        professores.push('Roberta')
+        console.log(professores)// Joao, Jose, Ana, Roberta
+
+        professores.splice(1, 2) //  O primeiro Parametro é o indice e o segundo é a quantidade de elementos a ser removidos após o indice.
+
+        professores.splice(1, 0, 'Marcos') // Insere um novo valor na Posicao 1
+        
+
+
+    </script>
+</body>
+</html>

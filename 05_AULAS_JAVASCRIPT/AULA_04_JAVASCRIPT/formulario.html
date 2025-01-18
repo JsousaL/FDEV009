@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários com Dom</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form id="form-usuario" action="recebe.php" method="POST">
+        <label for="">Nome</label>
+        <br>
+        <input type="text" id="nome" name="nome">
+        <span class="error" id="erro-nome"></span>
+        <br>
+        <label for="">Senha</label>
+        <br>
+        <input type="password" id="senha" name="senha">
+        <span class="error" id="erro-senha"></span>
+        <br>
+        <button>Enviar</button>
+    </form>
+    <script>
+        function validarDados(evento) {
+            const campoNome = document.querySelector('#nome')
+            const campoSenha = document.querySelector('#senha')
+
+            const nome = campoNome.value;
+            const senha = campoSenha.value;
+
+            if(nome === '') {
+                document.querySelector('#erro-nome').innerHTML = 'Nome obrigatório'
+                evento.preventDefault()
+                return false;
+            }
+
+            if(senha === '') {
+                document.querySelector('#erro-senha').innerHTML = 'Senha obrigatória'
+                evento.preventDefault()
+                return false;
+            }
+
+            alert("Formulário validado com sucesso")
+        }
+
+        document.querySelector('#form-usuario').addEventListener('submit', validarDados)
+    </script>
+</body>
+</html>
