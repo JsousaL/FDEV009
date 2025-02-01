@@ -1,12 +1,14 @@
 MODULO: REACTJS
 DATA: 01/02/2025
-
+j
 OBJETIVOS:
 
 - CONFIGURANDO O SEGUNDO PROJETO REACTJS COM VITE
 - O QUE SÃO REACT HOOKS?
+
 - O QUE SÃO ESTADOS NO REACT
 - USANDO O USESTATE
+
 - O QUE SÃO EFFECTS NO REACTJS?
 - USANDO USEEFFECT
 
@@ -15,5 +17,17 @@ EXERCÍCIOS:
 1. CRIE UM ESTADO PARA CONTROLAR A EXIBICAO DE UMA IMAGEM.
 ALTERNANDO ENTRE UMA IMAGEM E OUTRA.
 
+
+
+COMANDOS::
+npm create vite@latest
+Nome: projeto_vite
+Selecione: React
+Selecione: JavaScript
+-----------------------------
+
+cd projeto_vite
+npm install
+npm run dev
 
 
