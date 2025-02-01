@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#light {
+    height: 100vh;
+    background-color: white;
+    color: black;
+}
+#dark {
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
