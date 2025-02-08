@@ -1,11 +1,11 @@
 import LayoutDefault from "../../layouts/LayoutDefault";
 
-function HomePage() {
-    return (
+function CategoriasPage() {
+    return(
         <LayoutDefault>
-            Home
+            Categorias
         </LayoutDefault>
     )
 }
 
-export default HomePage;
+export default CategoriasPage;
