@@ -10,3 +10,22 @@ Objetivos:
 
 Conteudo:
 - Criar telas de um Sistema e Fluxo de Paginas.
+
+Site::
+Home
+Quem Somos
+Produtos/Serviços
+Contato
+
+Sistema:
+Login
+Dashboard
+Cruds
+
+
+npm create vite@latest
+nome_do_projeto
+Selecione React
+Selecione JavaScript
+
+npm install react-router-dom
